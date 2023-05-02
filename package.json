@@ -14,10 +14,9 @@
   },
   "meteor": {
     "mainModule": {
-      "client": "client/main.js",
-      "server": "server/main.js"
-    },
-    "testModule": "tests/main.js"
+      "client": "client/main.ts",
+      "server": "server/main.ts"
+    }
   },
   "devDependencies": {
     "@types/meteor": "^2.9.2"
