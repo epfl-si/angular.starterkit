@@ -8,9 +8,16 @@
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
+    "@angular/common": "^15.2.8",
+    "@angular/core": "^15.2.8",
+    "@angular/platform-browser": "^15.2.8",
+    "@angular/platform-browser-dynamic": "^15.2.8",
     "@babel/runtime": "^7.17.9",
     "jquery": "^3.6.0",
-    "meteor-node-stubs": "^1.2.1"
+    "meteor-node-stubs": "^1.2.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "zone.js": "^0.13.0"
   },
   "meteor": {
     "mainModule": {
@@ -19,6 +26,7 @@
     }
   },
   "devDependencies": {
+    "@angular/compiler": "^15.2.8",
     "@types/meteor": "^2.9.2"
   }
 }
