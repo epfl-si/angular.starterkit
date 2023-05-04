@@ -15,8 +15,8 @@ const clientConfig = {
                 loader: "raw-loader"
             },
             {
-                test: /\.(?:ngfactoryjs|ngstylejs|ts)$/,
-                loader: 'ts-loader'
+                test: /\.(?:ngfactoryjs|ngstylejs|js|ts)$/,
+                loader: '@ngtools/webpack'
             }
         ]
     },
