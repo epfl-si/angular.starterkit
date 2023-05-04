@@ -11,13 +11,6 @@
     "@babel/runtime": "^7.17.9",
     "meteor-node-stubs": "^1.2.1"
   },
-  "meteor": {
-    "mainModule": {
-      "client": "client/main.js",
-      "server": "server/main.js"
-    },
-    "testModule": "tests/main.js"
-  },
   "devDependencies": {
     "raw-loader": "^4.0.2",
     "ts-loader": "^9.4.2",
