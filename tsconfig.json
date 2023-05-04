@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "experimentalDecorators": true,
-    "noEmitHelpers": false
+    "noEmitHelpers": false,
+    "lib": [ "es2015", "dom" ]
   }
 }

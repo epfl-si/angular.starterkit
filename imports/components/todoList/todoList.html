@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let task of tasks" [ngClass]="{'checked': task.checked}">
+    <button class="delete" (click)="removeTask(task)">&times;</button>
+
+    <input type="checkbox" [checked]="task.checked" (click)="toggleChecked(task)" class="toggle-checked"/>
+
+    <span class="text">
+      {{task.text}}
+    </span>
+  </li>
+  <input type="text" placeholder="new task..." (keyup.enter)="addTaskAndClearInput($event.target)" />
+</ul>
