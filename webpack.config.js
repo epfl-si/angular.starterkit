@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { AngularWebpackPlugin } = require('@ngtools/webpack');
 const meteorExternals = require('webpack-meteor-externals');
 
 const projectPath = path.resolve('.').split(path.sep + '.meteor')[0];
@@ -19,6 +21,16 @@ const clientConfig = {
         ]
     },
     plugins: [
+        new AngularWebpackPlugin({
+            tsConfigPath: path.join(projectPath, './tsconfig.json'),
+            mainPath: path.join(projectPath, './client/index.ts'),
+            entryModule: path.join(projectPath, './client/app/app.module#AppModule'),
+            sourceMap: true,
+            skipCodeGeneration: process.env.NODE_ENV !== 'production'
+        }),
+        new HtmlWebpackPlugin({
+            template: './client/main.html'
+        }),
         new webpack.ProgressPlugin()
     ],
     externals: [
