@@ -5,7 +5,7 @@ const meteorExternals = require('webpack-meteor-externals');
 const projectPath = path.resolve('.').split(path.sep + '.meteor')[0];
 
 const clientConfig = {
-    entry: './client/main.js',
+    entry: './client/main.ts',
     devtool: 'nosources-source-map',
     module: {
         rules: [{
@@ -29,7 +29,7 @@ const clientConfig = {
     }
 };
 const serverConfig = {
-    entry: './server/main.js',
+    entry: './server/main.ts',
     target: 'node',
     module: {
         rules: [{
