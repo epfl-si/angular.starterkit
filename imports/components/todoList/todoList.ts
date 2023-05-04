@@ -1,27 +1,27 @@
-import { Observable } from 'rxjs'
 import { MongoObservable, zoneOperator } from 'meteor-rxjs'
 import { Component } from '@angular/core'
+import { Task, Tasks } from '../../api/tasks'
 
-const Tasks = new MongoObservable.Collection<Task>('tasks');
+const TasksObservable = new MongoObservable.Collection<Task>(Tasks as any)
 
 @Component({
   selector: 'todo-list',
   templateUrl: 'todoList.html'
 })
 export class TodoList {
-  tasks = Tasks.find({}).pipe(zoneOperator())
+  tasks = TasksObservable.find({}).pipe(zoneOperator())
 
   toggleChecked (task : Task) {
-    // TODO
+    Tasks.update(task._id, { $set: { checked: ! task.checked }})
   }
 
   removeTask (task : Task) {
-    // TODO
+    Tasks.remove(task._id)
   }
   addTaskAndClearInput (input : HTMLInputElement) {
     const text : string = input.value
     input.value = ""
 
-    // TODO
+    Tasks.insert({text, checked: false})
   }
 }
