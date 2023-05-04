@@ -17,5 +17,13 @@
       "server": "server/main.js"
     },
     "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "raw-loader": "^4.0.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.82.0",
+    "webpack-dev-middleware": "^6.1.0",
+    "webpack-meteor-externals": "0.0.5"
   }
 }
